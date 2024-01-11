@@ -1,0 +1,16 @@
+header {
+    background-color: #3498db;
+    padding: 10px;
+}
+
+header nav div {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: auto 0;
+    margin-inline-start: 1.25rem;
+    font-weight: bold;
+    font-size: larger;
+}
