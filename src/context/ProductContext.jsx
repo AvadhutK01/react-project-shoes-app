@@ -9,7 +9,7 @@ const productContext = React.createContext({
 
 
 export const ProductContextProvider = (props) => {
-    const [productList, setProductList] = useState(JSON.parse(localStorage.getItem("products")) || [
+    const [productList, setProductList] = useState(JSON.parse(localStorage.getItem("Shoesproducts")) || [
         {
             id: 1,
             name: "Sneakers",
@@ -62,7 +62,7 @@ export const ProductContextProvider = (props) => {
     );
 
     useEffect(() => {
-        localStorage.setItem("products", JSON.stringify(productList));
+        localStorage.setItem("Shoesproducts", JSON.stringify(productList));
     }, [productList]);
 
     const decreaseStocks = (productId, size, quantity) => {
