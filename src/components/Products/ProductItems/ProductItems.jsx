@@ -46,8 +46,24 @@ const ProductItems = ({ product }) => {
             </div>
             <img src={product.image} alt={product.name} className="product-image" />
             <p className="description">{product.description}</p>
-            <div className='flex items-center justify-center mb-4'>
-                <div className="flex items-center justify-center mb-4">
+            <div className='flex flex-col items-center justify-center mb-4'>
+                <div className="flex items-center justify-center mb-2">
+
+                    <select
+                        className="ml-2 p-2 border border-gray-300 rounded mt-2"
+                        value={selectedSize}
+                        onChange={handleSizeChange}
+                    >
+                        <option value="">Select Size</option>
+                        {sizes
+                            .filter((size) => product.stocks[size] > 0)
+                            .map((size) => (
+                                <option key={size} value={size}>
+                                    {size}{` (${product.stocks[size]})`}
+                                </option>
+                            ))}
+                    </select>
+
                     <div className="custom-number-input h-10 w-32 mx-1">
                         <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
                             <button
@@ -73,20 +89,6 @@ const ProductItems = ({ product }) => {
                             </button>
                         </div>
                     </div>
-                    <select
-                        className="ml-2 p-2 border border-gray-300 rounded"
-                        value={selectedSize}
-                        onChange={handleSizeChange}
-                    >
-                        <option value="">Select Size</option>
-                        {sizes
-                            .filter((size) => product.stocks[size] > 0)
-                            .map((size) => (
-                                <option key={size} value={size}>
-                                    {size}{` (${product.stocks[size]})`}
-                                </option>
-                            ))}
-                    </select>
 
                 </div>
                 <button type="button" className="add-to-cart" onClick={() => handleCartSubmit(product)}>Add To Cart</button>

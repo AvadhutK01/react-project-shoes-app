@@ -57,11 +57,11 @@ const AdminComponent = () => {
     }
 
     return (
-        <div className="container mx-auto mt-8">
+        <div className="mx-auto mt-6 border-2 rounded-lg shadow-xl w-[35rem] py-2">
             <h2 className="text-2xl font-bold mb-4">Add New Product</h2>
             <form className="max-w-md mx-auto">
-                <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                <div className="mb-3">
+                    <label className="block text-gray-700 text-sm font-bold mb-1 text-left" htmlFor="name">
                         Product Name
                     </label>
                     <input
@@ -74,8 +74,8 @@ const AdminComponent = () => {
                         required
                     />
                 </div>
-                <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
+                <div className="mb-3">
+                    <label className="block text-gray-700 text-sm font-bold mb-1 text-left" htmlFor="description">
                         Description
                     </label>
                     <textarea
@@ -84,12 +84,12 @@ const AdminComponent = () => {
                         value={newProduct.description}
                         onChange={handleInputChange}
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        rows="3"
+                        rows="2"
                         required
                     ></textarea>
                 </div>
-                <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="price">
+                <div className="mb-3">
+                    <label className="block text-gray-700 text-sm font-bold mb-1 text-left" htmlFor="price">
                         Price
                     </label>
                     <input
@@ -102,8 +102,8 @@ const AdminComponent = () => {
                         required
                     />
                 </div>
-                <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="image">
+                <div className="mb-3">
+                    <label className="block text-gray-700 text-sm font-bold mb-1 text-left" htmlFor="image">
                         Image URL
                     </label>
                     <input
@@ -116,8 +116,8 @@ const AdminComponent = () => {
                         required
                     />
                 </div>
-                <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="stocks-small">
+                <div className="mb-3">
+                    <label className="block text-gray-700 text-sm font-bold mb-1 text-left" htmlFor="stocks-small">
                         Stocks - Small
                     </label>
                     <input
@@ -130,8 +130,8 @@ const AdminComponent = () => {
                         required
                     />
                 </div>
-                <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="stocks-medium">
+                <div className="mb-3">
+                    <label className="block text-gray-700 text-sm font-bold mb-1 text-left" htmlFor="stocks-medium">
                         Stocks - Medium
                     </label>
                     <input
@@ -144,8 +144,8 @@ const AdminComponent = () => {
                         required
                     />
                 </div>
-                <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="stocks-large">
+                <div className="mb-3">
+                    <label className="block text-gray-700 text-sm font-bold mb-1 text-left" htmlFor="stocks-large">
                         Stocks - Large
                     </label>
                     <input
@@ -161,14 +161,14 @@ const AdminComponent = () => {
                 <button
                     type="button"
                     onClick={handleAddProduct}
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-2 my-1"
                 >
                     Add Product
                 </button>
                 <button
                     type="button"
                     onClick={handleGoHome}
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-2 my-1"
                 >
                     Home
                 </button>

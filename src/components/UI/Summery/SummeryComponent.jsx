@@ -4,7 +4,7 @@ const SummeryComponent = () => {
     return (
         <div className='shadow-xl'>
             <div className=' flex flex-col items-center justify-center'>
-                <img src="cover2.jpg" className='h-[30rem] w-full' alt="img" />
+                <img src="https://5.imimg.com/data5/SELLER/Default/2021/9/TY/GP/QF/115763706/slatwall-shelving-racks-500x500.jpg" className='h-[30rem] w-full' alt="img" />
                 <div className='w-[30rem] text-black border-2 p-7 rounded-xl bg-white absolute top-72 shadow-2xl'>
 
                     <p className='font-bold'>"Step into Elegance, Every Step of the Way: Discover Footwear Finesse with shoes&style"</p>

@@ -37,7 +37,8 @@ const CartComponent = () => {
             <ul>
                 {cartProducts.map((product) => (
                     <li key={product.Id}>
-                        <div className='ms-5'>{product.quantity}x {product.name} - {product.size}</div>
+                        <div className='ms-5 w-[6rem]'>{product.quantity}x {product.name}</div>
+                        <div className='font-bold'> {product.size}</div>
                         <div className="custom-number-input h-10 w-32 mx-1">
                             <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
                                 <button data-action="decrement" onClick={() => decrementQuantity(product.Id, product.size)} className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
